@@ -63,42 +63,42 @@ float AH3_t::getTemp1()
     return dummy;
 }
 
-float getPres1()
+float AH3_t::getPres1()
 {
     float dummy;
     AH3_I2C_readRegister(AH3_PRES1_0, (uint8_t*)&dummy, 4);
     return dummy;
 }
 
-float getTemp2()
+float AH3_t::getTemp2()
 {
     float dummy;
     AH3_I2C_readRegister(AH3_TEMP2_0, (uint8_t*)&dummy, 4);
     return dummy;
 }
 
-float getPres2()
+float AH3_t::getPres2()
 {
     float dummy;
     AH3_I2C_readRegister(AH3_PRES2_0, (uint8_t*)&dummy, 4);
     return dummy;
 }
 
-float getAspeed()
+float AH3_t::getAspeed()
 {
     float dummy;
     AH3_I2C_readRegister(AH3_ASPEED_0, (uint8_t*)&dummy, 4);
     return dummy;
 }
 
-float getAlt()
+float AH3_t::getAlt()
 {
     float dummy;
     AH3_I2C_readRegister(AH3_ALT_0, (uint8_t*)&dummy, 4);
     return dummy;
 }
 
-float getVspeed()
+float AH3_t::getVspeed()
 {
     float dummy;
     AH3_I2C_readRegister(AH3_VSPEED_0, (uint8_t*)&dummy, 4);

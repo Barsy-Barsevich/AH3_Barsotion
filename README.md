@@ -1,7 +1,7 @@
 # Arduino library for AH3 Pitot module
-- AH3 documentation: [https://github.com/Barsy-Barsevich/AH3-software/blob/main/docs/AH3_soft_revision_1_manual.pdf]
-- AH3 on-board software repository: [https://github.com/Barsy-Barsevich/AH3-software]
-- AH3 hardware repository: [https://github.com/Barsy-Barsevich/AH3-hardware]
+- [AH3 documentation](https://github.com/Barsy-Barsevich/AH3-software/blob/main/docs/AH3_soft_revision_1_manual.pdf)
+- [AH3 on-board software repository](https://github.com/Barsy-Barsevich/AH3-software)
+- [AH3 hardware repository](https://github.com/Barsy-Barsevich/AH3-hardware)
 
 ## Methods
 ### `AH3_t(int sda, int scl)` (constructor)

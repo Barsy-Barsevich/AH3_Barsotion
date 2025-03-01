@@ -6,12 +6,12 @@
 
 class AH3_t
 {
-    
+private:
+    void waitTillBusy();
 public:
     AH3_t(int sda, int scl);
     uint8_t getWhoAmI();
     uint8_t getSoftRevision();
-    void waitTillBusy();
     
     float getTemp1();
     float getPres1();

@@ -38,22 +38,22 @@
 #define AH3_VSPEED_2				0x1F
 #define AH3_VSPEED_3				0x20
 /* Register bits */
-#define AH3_ERR_BMP1_INIT			1<<0
-#define AH3_ERR_BMP2_INIT			1<<1
-#define AH3_ERR_I2C					1<<2
-#define AH3_ERR_BMP1_DATA			1<<3
-#define AH3_ERR_BMP2_DATA			1<<4
+#define AH3_ERR_BMP1_INIT			(1<<0)
+#define AH3_ERR_BMP2_INIT			(1<<1)
+#define AH3_ERR_I2C					(1<<2)
+#define AH3_ERR_BMP1_DATA			(1<<3)
+#define AH3_ERR_BMP2_DATA			(1<<4)
 //
-#define AH3_CFG_BMP1_EN				1<<0
-#define AH3_CFG_BMP2_EN				1<<1
-#define AH3_CFG_BMP1_FILT			1<<2
-#define AH3_CFG_BMP2_FILT			1<<3
-#define AH3_CFG_BMP1_CALIB			1<<4
-#define AH3_CFG_BMP2_CALIB			1<<5
-#define AH3_CFG_ASPEED_EN			1<<6
-#define AH3_CFG_ASPEED_CAL			1<<7
+#define AH3_CFG_BMP1_EN				(1<<0)
+#define AH3_CFG_BMP2_EN				(1<<1)
+#define AH3_CFG_BMP1_FILT			(1<<2)
+#define AH3_CFG_BMP2_FILT			(1<<3)
+#define AH3_CFG_BMP1_CALIB			(1<<4)
+#define AH3_CFG_BMP2_CALIB			(1<<5)
+#define AH3_CFG_ASPEED_EN			(1<<6)
+#define AH3_CFG_ASPEED_CAL			(1<<7)
 //
-#define AH3_STATUS_BMP1_DRDY		1<<0
-#define AH3_STATUS_BMP2_DRDY		1<<1
-#define AH3_STATUS_ASPEED_DRDY		1<<6
-#define AH3_STATUS_BUSY				1<<7
+#define AH3_STATUS_BMP1_DRDY		(1<<0)
+#define AH3_STATUS_BMP2_DRDY		(1<<1)
+#define AH3_STATUS_ASPEED_DRDY		(1<<6)
+#define AH3_STATUS_BUSY				(1<<7)

@@ -1,10 +1,13 @@
 #include "AH3_Barsotion.h"
 
-
+//includes Wire begin
+AH3_t ah3(17, 18);
 
 void setup() {
-  AH3_t ah3(17, 18);
-
+  //delay between Wire begin and init is necessary for proper working
+  delay(1000);
+  ah3.init();
+  
   Serial.begin(115200);
 
   while(1)

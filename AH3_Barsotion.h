@@ -1,5 +1,6 @@
 #pragma once
 
+#include <stdint.h>
 #include "AH3_Interface.h"
 #include "AH3_RegMap.h"
 
@@ -17,9 +18,11 @@ class AH3_t
 private:
     void waitTillBusy();
 public:
-    AH3_t(int sda, int scl);
-    void init(AH3_InitFlags_t flags);
+    AH3_t();
     void init();
+    void init(AH3_InitFlags_t flags);
+    void init(int sda, int scl);
+    void init(AH3_InitFlags_t flags, int sda, int scl);
     uint8_t getWhoAmI();
     uint8_t getSoftRevision();
     
@@ -30,4 +33,11 @@ public:
     float getAspeed();
     float getAlt();
     float getVspeed();
+
+private:
+	uint8_t i2c_init(uint8_t addr, int sda, int scl);
+    
+public:
+	uint8_t (*readRegister)(uint8_t reg, uint8_t *buf, uint8_t size);
+	uint8_t (*writeRegister)(uint8_t reg, uint8_t *buf, uint8_t size);
 };

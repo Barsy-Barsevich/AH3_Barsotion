@@ -1,13 +1,27 @@
 #include "AH3_Barsotion.h"
+#include "AH3_Interface.h"
 
-AH3_t::AH3_t(int sda, int scl)
+AH3_t::AH3_t()
 {
-    AH3_I2C_Init(0x02, sda, scl);
+    this->readRegister = AH3_I2C_readRegister;
+    this->writeRegister = AH3_I2C_writeRegister;
 }
 
 
-void AH3_t::init(AH3_InitFlags_t flags)
+
+uint8_t AH3_t::i2c_init(uint8_t addr, int sda, int scl)
 {
+	if (sda == -1 && scl == -1)
+		return AH3_I2C_Init(addr);
+	else
+		return AH3_I2C_Init_I2CPins(addr, sda, scl);
+}
+	
+
+void AH3_t::init(AH3_InitFlags_t flags, int sda, int scl)
+{
+    i2c_init(0x02, sda, scl);
+    
     uint8_t dummy = 0;
     if ((flags & AH3_FLAG_BMP1) == AH3_FLAG_BMP1)
         dummy |= AH3_CFG_BMP1_EN;
@@ -43,6 +57,19 @@ void AH3_t::init(AH3_InitFlags_t flags)
         //AH3_I2C_writeRegister(AH3_CONFIG, &dummy, 1);
     }
     AH3_I2C_writeRegister(AH3_CONFIG, &dummy, 1);
+
+}
+
+
+void AH3_t::init(AH3_InitFlags_t flags)
+{
+	init(flags, -1, -1);
+}
+
+
+void AH3_t::init(int sda, int scl)
+{
+    init(AH3_FLAG_AIR_SPEED, sda, scl);
 }
 
 

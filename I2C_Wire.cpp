@@ -4,7 +4,15 @@
 uint8_t global_AH3_addr;
 
 
-uint8_t AH3_I2C_Init(uint8_t addr, int sda, int scl)
+uint8_t AH3_I2C_Init(uint8_t addr)
+{
+    Wire.begin();
+    global_AH3_addr = addr;
+    return 0;
+}
+
+
+uint8_t AH3_I2C_Init_I2CPins(uint8_t addr, int sda, int scl)
 {
     Wire.begin(sda, scl);
     global_AH3_addr = addr;

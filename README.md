@@ -3,6 +3,8 @@
 - [AH3 on-board software repository](https://github.com/Barsy-Barsevich/AH3-software)
 - [AH3 hardware repository](https://github.com/Barsy-Barsevich/AH3-hardware)
 
+![](./docs/pic1.jpg)
+
 ## Methods
 ### `AH3_t(int sda, int scl)` (constructor)
 Initializes the module.
